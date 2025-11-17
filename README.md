@@ -64,6 +64,21 @@ Estos municipios son zonas históricamente cafeteras, con alta presencia de cult
 - Extracción de NDVI/EVI desde MODIS.
 - Importación de series económicas de FNC y OIC.
 
+#### 5.1.1 Variables 
+#### - NASA POWER 
+
+- PRECTOTCORR           MERRA-2 Precipitation Corrected (mm/day) 
+- IMERG_PRECTOT         MERRA-2 Total Precipitation (mm/day) 
+- T2M                   MERRA-2 Temperature at 2 Meters (C) 
+- T2M_MAX               MERRA-2 Temperature at 2 Meters Maximum (C) 
+- T2M_MIN               MERRA-2 Temperature at 2 Meters Minimum (C) 
+- RH2M                  MERRA-2 Relative Humidity at 2 Meters (%) 
+- QV2M                  MERRA-2 Specific Humidity at 2 Meters (g/kg) 
+- GWETTOP               MERRA-2 Surface Soil Wetness (1) 
+- GWETROOT              MERRA-2 Root Zone Soil Wetness (1) 
+- ALLSKY_SFC_SW_DWN     CERES SYN1deg All Sky Surface Shortwave Downward Irradiance (MJ/m^2/day) 
+- WS2M                  MERRA-2 Wind Speed at 2 Meters (m/s) 
+
 ### 5.2 Unificación temporal
 Los datos serán transformados en:
 - Series semanales.
