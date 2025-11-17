@@ -79,6 +79,45 @@ Estos municipios son zonas históricamente cafeteras, con alta presencia de cult
 - ALLSKY_SFC_SW_DWN     CERES SYN1deg All Sky Surface Shortwave Downward Irradiance (MJ/m^2/day) 
 - WS2M                  MERRA-2 Wind Speed at 2 Meters (m/s) 
 
+
+### Variables climáticas seleccionadas (NASA POWER)  
+A continuación se presentan las variables seleccionadas del repositorio NASA POWER, junto con su prioridad para el análisis y la justificación científica que soporta su relevancia frente al riesgo agrícola del café.
+
+| **Categoría**       | **Variable (NASA POWER)**                 | **Prioridad** | **Razón científica** |
+|---------------------|-------------------------------------------|--------------:|------------------------|
+| Precipitación       | Precipitación diaria                      | ⭐⭐⭐⭐⭐ | Principal causa de pérdidas: caída de fruto, hongos, asfixia radicular. |
+| Precipitación       | IMERG (alta resolución)                   | ⭐⭐⭐⭐⭐ | Mayor resolución → menor error en zonas montañosas; ideal para café. |
+| Temperatura         | T2M (temperatura a 2m)                    | ⭐⭐⭐⭐⭐ | Afecta floración, desarrollo y tasas de fotosíntesis. |
+| Temperatura         | T2M_MAX                                   | ⭐⭐⭐⭐ | Determina estrés térmico y marchitez. |
+| Temperatura         | T2M_MIN                                   | ⭐⭐⭐⭐ | Riesgo de frío → afecta floración y frutos nuevos. |
+| Humedad             | Humedad relativa                          | ⭐⭐⭐⭐ | Relacionada con enfermedades, estrés y hongos. |
+| Humedad             | Humedad específica                        | ⭐⭐⭐ | Balance hídrico del cultivo. |
+| Suelo               | Humedad superficial (0-5 cm)              | ⭐⭐⭐⭐⭐ | Determina riesgo de hongos, encharcamiento y saturación. |
+| Suelo               | Humedad radicular (0-100 cm)              | ⭐⭐⭐⭐⭐ | Impacta productividad → zona donde el café toma nutrientes. |
+| Radiación           | Onda corta descendente                    | ⭐⭐⭐ | Relacionada con fotosíntesis y ciclos fenológicos. |
+| Viento              | Velocidad del viento                      | ⭐⭐ | Baja correlación con pérdidas, pero útil para estrés evaporativo. |
+
+> **Nota:** Se eligieron variables con fuerte sustento agronómico y evidencia empírica en estudios de café de Cenicafé, FAO y literatura internacional.
+
+---
+
+###  Umbrales climáticos críticos para el cultivo de café
+Basados en estudios agroclimáticos, Cenicafé y literatura científica, se definen niveles de riesgo asociados con precipitación y sequía:
+
+| **Fenómeno**                     | **Nivel**   | **Riesgo** |
+|----------------------------------|-------------|------------|
+| Lluvia diaria > **20–25 mm**     | Alto        | Afecta floración, aumenta caída de flor y riesgo de hongos. |
+| Lluvia semanal > **120 mm**      | Muy alto    | Caída de fruto, proliferación de enfermedades. |
+| Lluvia mensual > **400 mm**      | Crítico     | Alto riesgo de pérdida de cosecha por saturación y enfermedades. |
+| Secas prolongadas > **20 días**  | Crítico     | Reducción en productividad futura, estrés hídrico y pérdida de floración. |
+
+> **Interpretación:**  
+> Estos umbrales servirán como **puntos de corte** para clasificar periodos como *“riesgo de pérdida”* vs *“condiciones normales”* para alimentar el modelo analítico.
+
+---
+
+
+
 ### 5.2 Unificación temporal
 Los datos serán transformados en:
 - Series semanales.
