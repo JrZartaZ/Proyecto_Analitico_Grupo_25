@@ -64,8 +64,8 @@ Estos municipios son zonas históricamente cafeteras, con alta presencia de cult
 - Extracción de NDVI/EVI desde MODIS.
 - Importación de series económicas de FNC y OIC.
 
-#### 5.1.1 Variables 
-#### - NASA POWER 
+### 5.1.1 Variables 
+#### *NASA POWER*
 
 - PRECTOTCORR           MERRA-2 Precipitation Corrected (mm/day) 
 - IMERG_PRECTOT         MERRA-2 Total Precipitation (mm/day) 
@@ -116,6 +116,104 @@ Basados en estudios agroclimáticos, Cenicafé y literatura científica, se defi
 
 ---
 
+#### *Federación Nacional de Cafeteros (FNC)*
+
+## Argumento técnico para usar el **Precio Interno del Café** (Fuente: FNC)
+
+El **precio interno del café publicado por la Federación Nacional de Cafeteros (FNC)** es la referencia económica más adecuada para este proyecto debido a su relevancia operativa, su solidez metodológica y su alta correlación con factores climáticos que afectan la producción. A continuación, se presentan las razones técnicas que justifican su uso:
+
+---
+
+### 1. Indicador oficial del mercado colombiano
+La FNC publica el precio base del café pergamino seco utilizado por cooperativas, compradores y productores.  
+Este precio es:
+
+- Oficial y autorizado a nivel nacional.  
+- Representativo de las transacciones reales del mercado interno.  
+- Usado operacionalmente por los actores de la cadena productiva.
+
+Por lo tanto, permite cuantificar de manera fiel el impacto económico asociado a eventos climáticos adversos.
+
+---
+
+### 2. El precio interno sintetiza múltiples factores económicos
+El valor publicado por la FNC integra en un único indicador:
+
+- Cotización internacional del café (ICE – Nueva York).  
+- Tasa de cambio COP/USD.  
+- Prima del café colombiano por calidad.  
+- Descuentos logísticos y comerciales.  
+- Costos y dinámicas del mercado interno.
+
+Esto convierte al precio interno en un **indicador compuesto**, ideal para capturar la señal económica total del sector.
+
+---
+
+### 3. Sensibilidad a variaciones en la oferta (por clima)
+Eventos como lluvias intensas, sequías o fenómenos ENSO afectan:
+
+- Volumen producido  
+- Calidad del grano  
+- Flujo de cosecha al mercado  
+
+Cuando ocurre pérdida de producción → **el precio interno tiende a subir**.  
+Cuando hay exceso de oferta → **el precio baja**.
+
+Esto lo convierte en una variable proxy perfecta para evaluar **riesgo agroclimático y pérdidas económicas** en el cultivo del café.
+
+---
+
+### 4. Frecuencia diaria y consistencia histórica
+El precio interno de la FNC se caracteriza por:
+
+- Disponibilidad diaria  
+- Alto historial temporal  
+- Metodología estable  
+- Ausencia de vacíos significativos  
+
+Estos atributos permiten:
+
+- Resampling semanal/mensual consistente  
+- Análisis temporales robustos  
+- Unión limpia con series de clima de NASA POWER
+
+Garantiza un análisis técnico confiable.
+
+---
+
+### 5. Fuente verificable y trazable
+Al provenir de una entidad oficial y auditada:
+
+- La información es pública, verificable y reproducible.  
+- Permite documentar procesos con transparencia.  
+- Es adecuada para análisis científicos, regulatorios o académicos.
+
+Su trazabilidad lo convierte en un insumo de alta calidad para proyectos analíticos.
+
+---
+
+### 6. Permite modelar impacto económico
+Para un proyecto cuyo objetivo es relacionar:
+
+**Condiciones climáticas ←→ Impacto económico**
+
+…el precio interno es ideal porque refleja:
+
+- Señales inmediatas de estrés productivo.  
+- Expectativas del mercado ante riesgos climáticos.  
+- Variabilidad económica vinculada al ciclo agrícola.
+
+Ejemplo práctico:
+
+> Lluvias >120 mm semanales en departamentos productores clave reducen la producción, afectan la calidad del grano y generan aumentos en el precio interno debido a menor oferta.
+
+Este comportamiento permite crear:
+
+- Modelos de clasificación (riesgo de pérdida vs normal).  
+- Modelos predictivos del precio a partir del clima.  
+- Señales de alerta temprana para riesgos agrícolas.
+
+---
 
 
 ### 5.2 Unificación temporal
