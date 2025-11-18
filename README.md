@@ -279,12 +279,10 @@ Esto justifica el análisis de rezagos y la identificación de **puntos crítico
 
 ## 9. Próximos Pasos
 
-1. Descargar datos climáticos para los cinco municipios seleccionados.  
-2. Construir las series temporales semanales y mensuales.  
-3. Realizar análisis exploratorio de correlaciones y tendencias.  
-4. Identificar umbrales críticos de precipitación asociados a pérdidas.  
-5. Evaluar modelos iniciales predictivos basados en clima y NDVI.  
-6. Preparar los insumos para la fase de modelado (Guías 5 y 6).  
+1. Realizar análisis exploratorio de correlaciones y tendencias.  
+2. Identificar umbrales críticos de precipitación asociados a pérdidas.  
+3. Evaluar modelos iniciales predictivos basados en clima y NDVI.  
+4. Preparar los insumos para la fase de modelado (Guías 5 y 6).  
 
 ---
 
