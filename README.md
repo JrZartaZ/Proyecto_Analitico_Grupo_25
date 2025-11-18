@@ -215,6 +215,48 @@ Este comportamiento permite crear:
 
 ---
 
+#### *UPRA – Evaluaciones Agropecuarias Municipales (EVA)*
+
+### Transformación temporal de la variable de rendimiento
+
+La variable de respuesta del proyecto corresponde al **rendimiento del café (ton/ha)**,
+calculado a partir del área cosechada y la producción reportada en el tablero EVA
+(Evaluaciones Agropecuarias Municipales). La fuente entrega información agregada a nivel
+**anual y mensual por departamento**, mientras que las variables climáticas procedentes de
+NASA POWER y otras fuentes satelitales se encuentran en **frecuencia diaria**.
+
+Dado que el objetivo del proyecto es analizar la relación entre clima y desempeño productivo
+en una escala **semanal** (enero de 2021 a octubre de 2025), fue necesario armonizar las
+frecuencias de las series. El procedimiento aplicado fue el siguiente:
+
+1. **Agregación de clima a frecuencia semanal.**  
+   Todas las variables climáticas diarias se transformaron a semana calendario:
+   - variables de acumulación (por ejemplo, precipitación) se sumaron por semana;
+   - variables de estado (por ejemplo, temperatura media, humedad relativa) se
+     promediaron semanalmente.
+
+2. **Construcción de un rendimiento ponderado nacional.**  
+   Se seleccionaron cinco departamentos cafeteros representativos
+   (Antioquia, Huila, Tolima, Caldas y Cauca). Para cada mes se calculó un
+   rendimiento agregado ponderado, utilizando como pesos la participación de
+   cada departamento en el área o la producción reportada para dicho periodo.
+   De este modo, se obtiene una serie de rendimiento que refleja el comportamiento
+   promedio de las principales zonas cafeteras del país.
+
+3. **Desagregación de datos mensuales/anuales a semana.**  
+   - Cuando existe información **mensual**, el rendimiento ponderado de cada mes se
+     asigna a las semanas pertenecientes a ese mes, manteniendo el nivel mensual
+     original (la suma de las semanas es consistente con el total del mes).
+   - Cuando la fuente dispone únicamente de valores **anuales**, se distribuye el
+     rendimiento entre los meses utilizando como referencia la estructura de
+     producción observada (meses con menor producción relativa reciben un peso
+     menor) y posteriormente se replica a las semanas asociadas.
+
+Este enfoque genera una serie de **rendimiento semanal proxy** que conserva la información
+oficial de EVA (mensual/anual) pero permite alinear la variable productiva con las
+variables climáticas en una escala común. Todos los supuestos de ponderación y
+desagregación se documentan y se consideran explícitamente en el análisis de calidad de
+datos y en las conclusiones del proyecto.
 
 ### 5.2 Unificación temporal
 Los datos serán transformados en:
